@@ -1,0 +1,20 @@
+/* Target only the Payment Method group */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"]) 
+  > .ff-el-input--content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Set custom fixed order (Stripe first, PayPal second, etc.) */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(1) { order: 2; } /* Stripe */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(2) { order: 1; } /* PayPal */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(3) { order: 3; } /* Offline */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(4) { order: 4; } /* Mollie */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(5) { order: 5; } /* RazorPay */
+.ff-el-group:has(> .ff-el-input--label label[aria-label="Payment Method"])
+  .ff-el-form-check:nth-child(6) { order: 6; } /* PayStack */
