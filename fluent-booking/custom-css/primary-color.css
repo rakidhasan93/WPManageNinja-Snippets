@@ -1,0 +1,103 @@
+.fcal_calendar_inner .fcal_date_wrapper .calendar .day.day_is_selected.day.day-enabled span {
+
+  background-color: #149bd7 !important;
+
+}
+
+.fcal_calendar_inner .fcal_date_wrapper .calendar .day.day-enabled:hover span {
+
+  background-color: #149bd7 !important;
+
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot .fcal_spot_confirm {
+
+background: #149bd7 !important;
+
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot.fcal_spot_selected {
+
+  border-color: #149bd7 !important;
+
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot.fcal_spot_selected .fcal_spot_name {
+
+  color: #149bd7 !important;
+
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot:before {
+
+  background: #149bd7 !important;
+
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item button {
+
+  background: #149bd7 !important;
+
+  border-color: #149bd7 !important;
+
+}
+
+.fcal_btn_submit {
+
+  background: #149bd7 !important;
+
+  border: 1px solid #149bd7 !important;
+
+}
+
+.fcal_svg {
+
+  border-color: #149bd7 !important;
+
+}
+
+.fcal_svg:hover {
+
+  background-color: #149bd7 !important;
+
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content input, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content select, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content textarea{
+
+border-color: #149bd7 !important;
+
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content input:focus, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content select:focus, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content textarea:focus {
+border-color: #149bd7 !important;
+}
+
+.calendar_nav .fcal_nav_active svg {
+    color: #149bd7 !important;
+}
+
+.fcal_calendar_inner .fcal_date_wrapper .calendar .day .is-today:before {
+    background: #149bd7 !important;
+}
+
+.fcal_calendar_inner .fcal_date_wrapper .calendar .day .is-today {
+    color: #149bd7 !important;
+}
+
+.fcal_no_availability button {
+background-color: #149bd7 !important;
+
+}
+
+.cube {
+background-color: #149bd7 !important;
+}
+
+.fcal_slot_picker .fcal_spot_lists:hover .fcal_spot:hover .fcal_spot_name {
+    color: #149bd7 !important;
+    border-color: #149bd7 !important;
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot {
+    border-color: #149bd7 !important;
+}
