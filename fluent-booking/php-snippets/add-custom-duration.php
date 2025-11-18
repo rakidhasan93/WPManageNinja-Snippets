@@ -1,19 +1,10 @@
-function custom_meeting_durations($durations) {
-    // Define the new durations to be added.
-    $new_durations = [
-        [
-            'value' => '300',
-            'label' => __('300 Minutes', 'fluent-booking-pro')
-        ],
-        [
-            'value' => '600',
-            'label' => __('600 Minutes', 'fluent-booking-pro')
-        ],
-        [
-            'value' => '720',
-            'label' => __('720 Minutes', 'fluent-booking-pro')
-        ]
+add_filter('fluent_booking/meeting_multi_durations_schema', function ($durations) {
+    $durations[] = [
+        'value' => '300',
+        'label' => __('300 Minutes', 'fluent-booking') // 5 hours
     ];
 
-    return $durations;
-}
+    $durations[] = [
+        'value' => '360',
+        'label' => __('360 Minutes', 'fluent-booking') // 6 hours
+    ];
