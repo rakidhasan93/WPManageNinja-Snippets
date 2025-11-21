@@ -1,0 +1,48 @@
+fcal_calendar_inner .fcal_side {
+    min-width: 150px !important;
+    width: 150px !important;
+}
+
+.fcal_timezone_select label {
+    font-size: 15px!important;
+}
+
+fcal_calendar_inner .fcal_icon_item {
+    font-size: 1.25rem !important;
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot .fcal_spot_name {
+    font-size: 1.25rem !important;
+}
+
+.fcal_slot_picker .fcal_slot_picker_header .fcal_slot_date_info {
+    font-size: 1.25rem!important;
+}
+
+.selected-item.svelte-82qwg8.svelte-82qwg8.svelte-82qwg8 {
+    font-size: 1.25rem !important;
+}
+
+.calendar.svelte-jvr8qp {
+    gap: 1.75rem !important;
+}
+
+.fcal_slot_picker .fcal_spot_lists .fcal_spot .fcal_spot_confirm {
+    font-size: 1.25rem !important;
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content .fcal_input_label {
+    font-size: 1.5rem !important;
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content input, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content select, .fcal_booking_form_wrap .fcal_booking_form .fcal_form_item .fcal_input_content textarea {
+    font-size: 1.25rem !important;
+}
+
+.fcal_booking_form_wrap .fcal_booking_form .fcal_form_item button {
+    font-size: 1.5rem !important;
+}
+
+.fcal_calendar_inner .fcal_date_wrapper .fcal_date_event_details .fcal_date_event_details_header h3 {
+    font-size: 1.75rem !important;
+}
