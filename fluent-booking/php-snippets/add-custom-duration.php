@@ -5,8 +5,8 @@ add_filter('fluent_booking/meeting_multi_durations_schema', function ($durations
     ];
 
     $durations[] = [
-        'value' => '360',
-        'label' => __('360 Minutes', 'fluent-booking') // 6 hours
+        'value' => '600',
+        'label' => __('600 Minutes', 'fluent-booking') // 6 hours
     ];
 return $durations;
 });
