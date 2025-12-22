@@ -12,11 +12,11 @@ add_filter('gettext', function ($translated, $text, $domain) {
     }
 
     if ($text === 'Email Address') {
-        return 'Username or Email';
+        return 'Username';
     }
 
     if ($text === 'Your account email address') {
-        return 'Enter your username or email';
+        return 'Enter your username';
     }
 
     return $translated;
