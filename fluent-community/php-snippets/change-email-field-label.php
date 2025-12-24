@@ -1,15 +1,26 @@
 add_filter('gettext', function ($translated, $text, $domain) {
 
+    // Only FluentCommunity
     if ($domain !== 'fluent-community') {
         return $translated;
     }
 
-    switch ($text) {
-        case 'Email Address':
-            return 'Username';
+    // Only login form
+    if (
+        empty($_GET['fcom_action']) ||
+        $_GET['fcom_action'] !== 'auth' ||
+        empty($_GET['form']) ||
+        $_GET['form'] !== 'login'
+    ) {
+        return $translated;
+    }
 
-        case 'Your account email address':
-            return 'Enter your username';
+    if ($text === 'Email Address') {
+        return 'Username';
+    }
+
+    if ($text === 'Your account email address') {
+        return 'Enter your username';
     }
 
     return $translated;
