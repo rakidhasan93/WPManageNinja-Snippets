@@ -1,16 +1,15 @@
 add_filter('gettext', function ($translated, $text, $domain) {
 
-    // Only FluentCommunity
     if ($domain !== 'fluent-community') {
         return $translated;
     }
 
-    // Only login form
+    // Exclude registration page explicitly
     if (
-        empty($_GET['fcom_action']) ||
-        $_GET['fcom_action'] !== 'auth' ||
-        empty($_GET['form']) ||
-        $_GET['form'] !== 'login'
+        isset($_GET['fcom_action']) &&
+        $_GET['fcom_action'] === 'auth' &&
+        isset($_GET['form']) &&
+        $_GET['form'] === 'register'
     ) {
         return $translated;
     }
