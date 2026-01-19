@@ -1,5 +1,5 @@
 add_action('template_redirect', function () {
-    $portal_slug = 'community';
+    $portal_slug = 'portal';
 
     // Current request path without domain/query
     $req = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
