@@ -6,7 +6,7 @@ add_action('template_redirect', function () {
 
     // Only redirect if visiting exactly /community AND user is logged in
     if ($req === $portal_slug && is_user_logged_in()) {
-        wp_safe_redirect(home_url("/{$portal_slug}/courses"), 302);
+        wp_safe_redirect(home_url("/{$portal_slug}/courses?type=enrolled"), 302);
         exit;
     }
 }, 0);
