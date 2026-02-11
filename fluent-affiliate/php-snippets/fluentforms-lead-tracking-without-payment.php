@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Add as a PHP snippet (WPCode / Code Snippets), run on frontend (or everywhere).
+ * Add as a PHP snippet (FluentSnippets), run on frontend (or everywhere).
  * Tracks FluentForms non-payment submissions as FluentAffiliate leads.
  */
 
