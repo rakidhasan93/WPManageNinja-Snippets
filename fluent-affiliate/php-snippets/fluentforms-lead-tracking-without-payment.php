@@ -10,6 +10,7 @@ function fa_ff_lead_find_email($data) {
         return '';
     }
 
+
     foreach ($data as $value) {
         if (is_array($value)) {
             $email = fa_ff_lead_find_email($value);
