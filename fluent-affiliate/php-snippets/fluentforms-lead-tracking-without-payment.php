@@ -1,4 +1,4 @@
-
+<?php
 
 /**
  * Add as a PHP snippet (WPCode / Code Snippets), run on frontend (or everywhere).
