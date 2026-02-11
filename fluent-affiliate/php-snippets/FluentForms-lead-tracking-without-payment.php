@@ -151,6 +151,7 @@ function fa_ff_track_non_paid_lead($entry, $formData = [], $form = null) {
 /**
  * Hook multiple FluentForms submission actions for compatibility.
  */
+
 add_action('fluentform_submission_inserted', 'fa_ff_track_non_paid_lead', 10, 3);
 add_action('fluentform/after_insert_submission', 'fa_ff_track_non_paid_lead', 10, 3);
 add_action('fluentform/submission_inserted', 'fa_ff_track_non_paid_lead', 10, 3);
