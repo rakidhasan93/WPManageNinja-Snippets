@@ -1,6 +1,31 @@
+<style>
+/* Password wrapper */
+.ff-password-wrapper {
+    position: relative;
+}
+
+/* Ensure padding for toggle button */
+.ff-password-wrapper input[type="password"],
+.ff-password-wrapper input[type="text"] {
+    padding-right: 40px !important;
+}
+
+/* Toggle button style */
+.ff-password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+</style>
+
+<script>
 (function($){
     $form.ready(function () {
-        const $passwordInput = $form.find('#ff_31_password');
+        const $passwordInput = $form.find('#ff_64_password');
 
         if ($passwordInput.length === 0) return;
 
@@ -18,28 +43,8 @@
         $toggleBtn.on('click', function () {
             const isPassword = $passwordInput.attr('type') === 'password';
             $passwordInput.attr('type', isPassword ? 'text' : 'password');
-            $toggleBtn.text(isPassword ? 'hide' : 'show️'); // eye open/close icons
+            $toggleBtn.text(isPassword ? 'hide' : 'show️'); // eye open/close text
         });
     });
 })(jQuery);
-
-
-
-.ff-password-wrapper {
-    position: relative;
-}
-
-.ff-password-wrapper input[type="password"],
-.ff-password-wrapper input[type="text"] {
-    padding-right: 40px !important;
-}
-
-.ff-password-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 16px;
-    user-select: none;
-}
+</script>
