@@ -1,3 +1,5 @@
+<?php
+
 add_action('fluent_booking/before_booking', function ($bookingData, $calendarEvent) {
     $email = sanitize_email($bookingData['email']);
 
