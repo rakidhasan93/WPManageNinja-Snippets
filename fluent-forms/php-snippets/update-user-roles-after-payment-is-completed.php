@@ -19,14 +19,22 @@
 
 function tct_ff_update_user_role_after_paid_status( $new_status, $submission, $transaction_id ) {
 	/*
-	 * Set the role that you want to update to.
-	 *
-	 * @var string
-	*/
+	 * Set the role that you want to add/update.
+	 */
 	$role = 'subscriber';
+
+	/*
+	 * Set the Fluent Form ID where this should run.
+	 */
+	$target_form_id = 123;
 
 	// Only proceed if the new status is 'paid'.
 	if ( strtolower( $new_status ) !== 'paid' ) {
+		return;
+	}
+
+	// Only run for the specific form.
+	if ( empty( $submission->form_id ) || intval( $submission->form_id ) !== $target_form_id ) {
 		return;
 	}
 
@@ -43,7 +51,8 @@ function tct_ff_update_user_role_after_paid_status( $new_status, $submission, $t
 		return;
 	}
 
-	// Set user role.
+	// Replace the user's role.
 	$user->set_role( $role );
 }
 add_action( 'fluentform/after_transaction_status_change', 'tct_ff_update_user_role_after_paid_status', 10, 3 );
+
