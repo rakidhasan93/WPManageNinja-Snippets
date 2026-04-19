@@ -1,0 +1,9 @@
+<style>
+
+.fcal_slot_picker .fcal_slot_items .fcal_spot_lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+}
+
+</style>
