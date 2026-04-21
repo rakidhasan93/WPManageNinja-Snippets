@@ -1,7 +1,10 @@
 <?php
 
 add_filter('fluent_calendar/global_booking_vars', function ($vars) {
-    $vars['i18']['Add guest']  = 'Ajouter un participant';
-    $vars['i18']['Add guests'] = 'Ajouter un participant'; // if plural appears
+    $vars['i18']['Add guest'] = 'Tilføj gæst';
+    $vars['i18']['Name'] = 'Név';
+    $vars['i18']['Email'] = 'E-mail';
+    $vars['i18']['Please select'] = 'Kérjük válasszon';
     return $vars;
 });
+
