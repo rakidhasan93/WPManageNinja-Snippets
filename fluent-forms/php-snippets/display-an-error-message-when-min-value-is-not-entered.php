@@ -1,8 +1,4 @@
-add_action('wp_footer', function () {
-    if (is_admin()) {
-        return;
-    }
-    ?>
+
     <script>
     (function ($) {
         function prepareCustomPaymentMin($form) {
@@ -136,6 +132,5 @@ add_action('wp_footer', function () {
             });
         });
     })(jQuery);
+    
     </script>
-    <?php
-});
