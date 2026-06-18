@@ -1,11 +1,16 @@
 <?php
 /**
- * Block submission if no subscription plan is selected.
+ * Block submission only when no subscription plan is selected.
  * Form ID: 1148
  */
 add_filter('wppayform/form_submission_validation_errors', function ($errors, $formId, $formattedElements) {
     if ((int) $formId !== 1148) {
         return $errors;
+    }
+
+    $submittedData = [];
+    if (!empty($_REQUEST['form_data'])) {
+        parse_str(wp_unslash($_REQUEST['form_data']), $submittedData);
     }
 
     // These are the two recurring fields in your exported form.
@@ -17,14 +22,20 @@ add_filter('wppayform/form_submission_validation_errors', function ($errors, $fo
     $hasSelection = false;
 
     foreach ($subscriptionFields as $fieldKey) {
-        if (!isset($_POST[$fieldKey])) {
+        if (!array_key_exists($fieldKey, $submittedData)) {
             continue;
         }
 
-        $value = trim((string) wp_unslash($_POST[$fieldKey]));
+        $value = $submittedData[$fieldKey];
 
-        // Important: "0" is a valid selection, so don't use empty()
-        if ($value !== '') {
+        // For select/radio plans this is usually a numeric index like "0", "1", "2".
+        // "0" is a valid selection, so we only block if it is truly empty.
+        if (!is_array($value) && trim((string) $value) !== '') {
+            $hasSelection = true;
+            break;
+        }
+
+        if (is_array($value) && !empty($value)) {
             $hasSelection = true;
             break;
         }
