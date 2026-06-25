@@ -1,3 +1,5 @@
+<?php
+
 add_action('wp_login', function ($user_login, $user) {
     if (
         !class_exists('\FluentAuth\App\Helpers\Helper') ||
@@ -10,3 +12,5 @@ add_action('wp_login', function ($user_login, $user) {
         wp_set_auth_cookie($user->ID, true, is_ssl());
     }
 }, 99, 2);
+
+?>
